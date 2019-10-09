@@ -7,6 +7,12 @@
     evt.preventDefault();
     page.classList.toggle('js-disabled');
     page.classList.toggle('js-opened');
+
+    if (document.documentElement.style.overflow === 'hidden') {
+      document.documentElement.style.overflow = 'auto';
+    } else {
+      document.documentElement.style.overflow = 'hidden';
+    }
   }
 
   menuButton.addEventListener('click', onMenuButtonClick);

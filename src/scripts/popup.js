@@ -5,6 +5,7 @@
   var feedbackCloseButton = feedbackPopup.querySelector('.popup__close-button');
 
   var closePopup = function () {
+    document.documentElement.style.overflow = 'auto';
     feedbackPopup.classList.remove('js-shown');
     document.removeEventListener('click', onPopupEscPress);
     page.classList.remove('js-disabled');
@@ -17,9 +18,10 @@
   var onFeedbackLinkClick = function (evt) {
     evt.preventDefault();
 
+    document.documentElement.style.overflow = 'hidden';
     feedbackPopup.classList.add('js-shown');
     page.className = 'page js-disabled';
-    document.addEventListener('keydown', onPopupEscPress)
+    document.addEventListener('keydown', onPopupEscPress);
   }
 
   var onCloseButtonClick = function (evt) {
