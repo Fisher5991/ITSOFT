@@ -1,0 +1,292 @@
+.header__side {
+  position: absolute;
+  top: 0;
+  left: -210px;
+  z-index: 10;
+  width: 210px;
+  height: 100%;
+  background-color: $blue;
+  overflow-y: auto;
+
+  @media (max-width: 2000px) {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+  }
+
+  @include tablet-max {
+    left: -210px;
+    transition: left 0.3s;
+  }
+}
+
+@include tablet-max {
+  .page {
+    &.js-disabled.js-opened {
+      .header__side {
+        left: 0;
+      }
+    }
+  }
+}
+
+.header__side-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 13px;
+  padding-right: 23px;
+  padding-bottom: 14px;
+  padding-left: 19px;
+  overflow-y: auto;
+
+  @media (max-width: 2000px) {
+    position: static;
+    height: 100%;
+    overflow-y: visible;
+  }
+}
+
+.header__social-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 46px;
+  padding-left: 5px;
+}
+
+.header__social-item {
+  margin-right: 5px;
+}
+
+.header__social-link {
+  display: block;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.header__social-picture {
+  display: block;
+}
+
+.header__contacts {
+  position: relative;
+  margin-top: auto;
+  padding-top: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 68px;
+    height: 1px;
+    background-color: #81aaca;
+  }
+}
+
+.header__contacts-text {
+  margin-top: 0;
+  margin-bottom: 6px;
+  width: 108px;
+  font-size: 13px;
+  line-height: (16 / 13);
+  color: #84b6dd;
+}
+
+.header__tel {
+  font-size: 16px;
+  line-height: (30 / 16);
+  font-weight: 700;
+  color: white;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.header__blocks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-top: 9px;
+  padding-right: 26px;
+  padding-left: 27px;
+
+  @include tablet-max {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.header__logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-right: auto;
+
+  &--mobile {
+    display: none;
+  }
+
+  @include mobile-max {
+    &--mobile {
+      display: block;
+    }
+
+    &--desktop {
+      display: none;
+    }
+  }
+}
+
+.header__logo-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  margin-bottom: 7px;
+
+  &--bausch {
+    margin-top: 5px;
+    margin-right: 49px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -28px;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 18px;
+      background-color: #4282ad;
+    }
+  }
+
+  &:last-child {
+    margin-right: 30px;
+  }
+
+  @include mobile-max {
+    margin-bottom: 20px;
+    margin-right: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--bausch {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.header__logo {
+  display: block;
+
+  &--bausch {
+    width: 179px;
+    height: 14px;
+  }
+
+  &--valeant {
+    width: 154px;
+    height: 25px;
+  }
+}
+
+.header__feedback {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  min-width: 140px;
+
+  @include mobile-max {
+    min-width: 100px;
+    margin-left: auto;
+  }
+}
+
+.header__feedback-text {
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  padding-left: 30px;
+  font-size: 12px;
+  line-height: (18 / 12);
+  color: $blue;
+  background-image: url("../images/feedback.svg");
+  background-size: 21px 20px;
+  background-repeat: no-repeat;
+  background-position: left 4px;
+}
+
+.header__feedback-link {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.header__manufacturer {
+  @include mobile-max {
+    display: none;
+  }
+}
+
+.header__button-wrapper {
+  display: none;
+  position: relative;
+  top: 0;
+  width: 40px;
+  height: 30px;
+  margin-right: 20px;
+  margin-bottom: 8px;
+
+  @include tablet-max {
+    display: block;
+  }
+}
+
+.header__menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header__button-icon {
+  position: relative;
+  width: 30px;
+  height: 2px;
+  background-color: $blue;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color: inherit;
+  }
+
+  &::before {
+    top: 8px;
+  }
+
+  &::after {
+    top: -8px;
+  }
+}

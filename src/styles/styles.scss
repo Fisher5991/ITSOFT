@@ -1,0 +1,22 @@
+@import "global/normalize-8.0.1";
+@import "global/_variables";
+@import "global/_mixins";
+@import "global/_global";
+@import "global/_fonts";
+
+@import "../libs/swiper/swiper.min.scss";
+
+@import "components/tabs";
+@import "components/button";
+@import "components/page";
+@import "components/form";
+@import "components/main";
+@import "components/header";
+@import "components/nav";
+@import "components/advantages";
+@import "components/causes";
+@import "components/risk";
+@import "components/test";
+@import "components/buying";
+@import "components/footer";
+@import "components/popup";

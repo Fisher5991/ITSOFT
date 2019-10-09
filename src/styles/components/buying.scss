@@ -1,0 +1,47 @@
+.buying {
+  padding-left: 42px;
+  background-color: #4282ad;
+  background-position: 68% -44%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/map.png");
+
+  @include retina {
+    background-image: url("../images/map@2x.png");
+  }
+
+  @include laptop-max {
+    background-size: 571px 856px;
+
+    @include retina {
+      background-size: 571px 856px;
+    }
+  }
+
+  @include mobile-max {
+    padding-left: 25px;
+    background-size: cover;
+
+    @include retina {
+      background-size: cover;
+    }
+  }
+}
+
+.buying__title {
+  color: white;
+}
+
+.buying__text {
+  line-height: (22 / 14);
+  color: white;
+  font-weight: 300;
+}
+
+.buying__link {
+  margin-left: 7px;
+  padding-right: 16px;
+  padding-left: 24px;
+  font-size: 28px;
+  line-height: (39 / 28);
+}

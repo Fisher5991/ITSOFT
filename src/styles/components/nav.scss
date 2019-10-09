@@ -1,0 +1,23 @@
+.nav__list {
+  @include list-reset;
+  margin-top: -13px;
+  margin-bottom: 20px;
+  padding-left: 4px;
+}
+
+.nav__item {
+  margin-top: 13px;
+}
+
+.nav__link {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: white;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}

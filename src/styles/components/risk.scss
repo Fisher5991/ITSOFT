@@ -1,0 +1,151 @@
+.risk {
+  position: relative;
+  padding-top: 45px;
+  background-color: #012f54;
+  background-image: url("../images/risk_bg.jpg");
+  background-position: 70% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-image: url("../images/risk_bg@2x.jpg");
+  }
+}
+
+.risk__item {
+  min-height: 513px;
+  padding: 72px 68px 140px 40px;
+  background-image: url("../images/student.png");
+  background-position: left 11.8% bottom 0;
+  background-size: 438px;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-image: url("../images/student@2x.png");
+    background-size: 438px;
+    background-position: left 11.8% bottom 0;
+  }
+
+  @include tablet-max {
+    background-position: left 7.8% bottom 0;
+    background-size: 368px;
+
+    @include retina {
+      background-size: 368px;
+    }
+  }
+
+  @include mobile-max {
+    padding-right: 25px;
+    padding-left: 25px;
+    background-image: none;
+    padding-bottom: 220px;
+  }
+}
+
+.risk__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 16px;
+  margin-right: 63px;
+  color: white;
+  font-size: 45px;
+  line-height: 50px;
+  font-weight: 700;
+  text-align: center;
+
+  @include mobile-max {
+    font-size: 25px;
+  }
+}
+
+.risk__info {
+  width: 48.5232%;
+  margin-left: auto;
+
+  @include mobile-max {
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.risk__subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: white;
+}
+
+.risk__text {
+  margin-top: 0;
+  margin-bottom: 27px;
+  line-height: (22 / 14);
+  font-weight: 300;
+  color: white;
+}
+
+.risk__tab-list {
+  @include list-reset;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 46px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -11px;
+  margin-left: -11px;
+  width: 100%;
+  max-width: 585px;
+  padding-left: 20px;
+  padding-right: 65px;
+
+  @include mobile-max {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.risk__link {
+  display: inline-block;
+  margin-left: 2px;
+  padding-top: 7px;
+  padding-bottom: 9px;
+  padding-right: 19px;
+  padding-left: 22px;
+  font-size: 13px;
+  line-height: (18 / 13);
+  color: white;
+}
+
+.risk__tab-item {
+  margin-top: 11px;
+  margin-left: 11px;
+}
+
+.risk__tab-link {
+  display: block;
+  padding-top: 3px;
+  padding-right: 14px;
+  padding-left: 14px;
+  padding-bottom: 5px;
+  font-size: 11px;
+  line-height: (15 / 11);
+  letter-spacing: -0.2px;
+  background-color: white;
+  color: $blue;
+  border-radius: 19px;
+  text-align: center;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover,
+  &.js-active {
+    color: white;
+    background-color: #0c6db6;
+  }
+}

@@ -1,0 +1,238 @@
+.advantages__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-top: 35px;
+  padding-right: 30px;
+  padding-bottom: 22px;
+  padding-left: 29px;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    .advantages__context {
+      display: block;
+      opacity: 0.5;
+    }
+
+    .advantages__text {
+      opacity: 0;
+    }
+
+    .advantages__medicines {
+      display: flex;
+    }
+  }
+
+  &--medicines {
+    min-height: 418px;
+    padding-left: 24px;
+    background-color: #4282ad;
+    background-position: center;
+    background-image: url("../images/default-eye.svg");
+    background-position: 50% 52%;
+    background-size: 203px;
+
+    &:hover,
+    &:focus {
+      background-image: url("../images/tired-eye.svg");
+      background-size: 308px;
+      background-position: 46% 14%;
+    }
+  }
+
+  &--vessels {
+    min-height: 418px;
+    background-color: #cd5463;
+    background-position: center;
+    background-image: url("../images/vessels-eye.svg");
+    background-size: 201px;
+    background-position: 54% 47%;
+
+    &:hover,
+    &:focus {
+      background-image: url("../images/vessels-eye-default.svg");
+      background-size: 199px;
+      background-position: 54% 47%;
+    }
+
+    .advantages__text {
+      padding-right: 44px;
+    }
+  }
+
+  &--healthy {
+    min-height: 413px;
+    padding-top: 36px;
+    padding-left: 25px;
+    background-color: #2bb673;
+    background-position: center;
+    background-image: url("../images/healthy-eye.svg");
+    background-size: 219px 139px;
+    background-size: 218px;
+    background-position: 49% 48.8%;
+
+    &:hover,
+    &:focus {
+      background-image: url("../images/healthy-eye-default.svg");
+      background-size: 223px;
+      background-position: 49% 49%;
+    }
+  }
+
+  &--no-risk {
+    min-height: 413px;
+    padding-top: 36px;
+    padding-left: 35px;
+    background-color: #fbb040;
+    background-position: center;
+    background-image: url("../images/no-risk-eye.svg");
+    background-size: 230px;
+    background-position: 60.1% 50%;
+
+    &:hover,
+    &:focus {
+      background-image: url("../images/no-risk-eye-default.svg");
+      background-size: 222px;
+      background-position: 60% 50%;
+    }
+  }
+
+  @include tablet-max {
+    height: 40.86vw;
+    min-height: 350px;
+
+    &--medicines {
+      background-size: 39.726%;
+      background-position: 50% 50%;
+
+      &:hover,
+      &:focus {
+        background-size: 60.274%;
+        background-position: 50% 34%;
+      }
+    }
+
+    &--vessels {
+      background-size: 39.335%;
+      background-position: 50% 50%;
+
+      &:hover,
+      &:focus {
+        background-size: 38.94%;
+        background-position: 50% 50%;
+      }
+    }
+
+    &--healthy {
+      background-size: 42.66%;
+      background-position: 50% 50%;
+
+      &:hover,
+      &:focus {
+        background-size: 43.64%;
+        background-position: 50% 50%;
+      }
+    }
+
+    &--no-risk {
+      background-size: 45.01%;
+      background-position: 50% 50%;
+
+      &:hover,
+      &:focus {
+        background-size: 43.444%;
+        background-position: 50% 50%;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.advantages__context {
+  position: absolute;
+  top: 37px;
+  right: 69px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: (40 / 1000) + em;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.advantages__text {
+  max-width: 292px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: (24 / 16);
+  letter-spacing: (40 / 1000) + em;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.advantages__medicines {
+  @include list-reset;
+  display: none;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: auto;
+  margin-left: -4px;
+}
+
+.advantages__medicines-item {
+  position: relative;
+  margin-left: 4px;
+
+  img {
+    display: block;
+  }
+}
+
+.advantages__medicines-link {
+  &:hover + .advantages__medicines-name,
+  &:focus + .advantages__medicines-name {
+    display: block;
+  }
+}
+
+.advantages__medicines-name {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  left: 30px;
+  display: none;
+  width: 159px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 21px;
+  font-size: 13px;
+  line-height: (18 / 13);
+  color: $blue;
+  background-color: white;
+  border-radius: 21px;
+
+  &:hover {
+    display: block;
+  }
+
+  @include mobile-max {
+    left: 0;
+  }
+}

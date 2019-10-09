@@ -1,0 +1,31 @@
+.button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  &--white {
+    border: 3px solid white;
+    border-radius: 19px;
+    color: white;
+
+    &:hover,
+    &:focus {
+      background-color: white;
+      color: $blue;
+    }
+  }
+
+  &--blue {
+    border: 3px solid $blue;
+    border-radius: 19px;
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      background-color: $blue;
+      color: white;
+    }
+  }
+}

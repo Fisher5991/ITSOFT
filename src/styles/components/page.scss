@@ -1,0 +1,39 @@
+.page {
+  max-width: 2000px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.page__wrapper {
+  position: relative;
+  left: 0;
+  margin-left: 210px;
+  background-color: white;
+  transition: left 0.3s;
+
+  @include tablet-max {
+    margin-left: 0;
+  }
+}
+
+.page {
+  &.js-disabled {
+    overflow: hidden;
+  }
+
+  &.js-opened.js-disabled {
+    overflow: auto;
+  }
+
+  @include tablet-max {
+    &.js-opened.js-disabled {
+      overflow: hidden;
+    }
+
+    &.js-opened .page__wrapper {
+      left: 210px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.test {
+  background-color: white;
+}
+
+.test__text {
+  margin-left: 5px;
+  line-height: (22 / 14);
+  font-weight: 300;
+}
+
+.test__link {
+  margin-right: 18px;
+  font-size: 28px;
+  line-height: (39 / 28);
+}
+
+.test__more {
+  position: relative;
+  align-self: flex-end;
+  width: 83.5%;
+  min-width: 250px;
+  margin-top: 20px;
+  margin-bottom: 39px;
+  padding-left: 43px;
+  font-size: 12px;
+  line-height: (18 / 12);
+  color: $blue;
+  font-weight: 300;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 29px;
+    height: 37px;
+    background-image: url("../images/check.png");
+    background-size: 29px 37px;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url("../images/check@2x.png");
+      background-size: 29px 37px;
+    }
+  }
+}
+
+.test__term {
+  font-weight: 700;
+}
